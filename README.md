@@ -9,15 +9,14 @@ I am just another regular developer.
 
 🧰 Toolbox
 
-<div style="display: flex">  
+<div style="display: flex; justify-content: space-between;">
   <img alt="GIT" src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" width="50" height="50"/>
   <img alt="BASH" src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" width="50" height="50"/>
   <img alt="DOCKER" src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg" width="50" height="50"/>
   <img alt="JENKINS" src="https://github.com/devicons/devicon/blob/master/icons/jenkins/jenkins-original.svg" width="50" height="50"/>  
 </div>
 
-<div style="display: flex">  
-  
+<div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript Logo" width="50" height="50"/> 
   <img alt="TS" src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" width="50" height="50"/>
   <img alt="REACT" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" width="50" height="50"/>
@@ -28,30 +27,26 @@ I am just another regular developer.
   <img alt="WEBPACK" src="https://github.com/devicons/devicon/blob/master/icons/webpack/webpack-original.svg" width="50" height="50"/>
 </div>
 
-<div style="display: flex">  
+<div style="display: flex; justify-content: space-between;">  
   <img alt="BOOTSTRAP" src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain.svg" width="50" height="50"/>  
   <img alt="CSS" src="https://cdn.worldvectorlogo.com/logos/css3.svg" width="50" height="50"/>
   <img alt="LESS" src="https://github.com/devicons/devicon/blob/master/icons/less/less-plain-wordmark.svg" width="50" height="50"/>
   <img alt="SASS" src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" width="50" height="50"/>
   <img alt="JQUERY" src="https://github.com/devicons/devicon/blob/master/icons/jquery/jquery-original-wordmark.svg" width="50" height="50"/>  
 </div>
-  
-<div style="display: flex">
-  
+
+<div style="display: flex; justify-content: space-between;">
   <img alt="DOTNETCORE" src="https://github.com/devicons/devicon/blob/master/icons/dotnetcore/dotnetcore-original.svg" width="50" height="50"/>
   <img alt="CSHARP" src="https://github.com/devicons/devicon/blob/master/icons/csharp/csharp-original.svg" width="50" height="50"/>
   <img alt="SQL" src="https://github.com/devicons/devicon/blob/master/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg" width="50" height="50"/>
   <img alt="NGINX" src="https://github.com/devicons/devicon/blob/master/icons/nginx/nginx-original.svg" width="50" height="50"/>
-  
 </div>
-  
-<div style="display: flex">
-  
+
+<div style="display: flex; justify-content: space-between;">
   <img alt="FIREBASE" src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain.svg" width="50" height="50"/>
   <img alt="BITBUCKET" src="https://github.com/devicons/devicon/blob/master/icons/bitbucket/bitbucket-original.svg" width="50" height="50"/>
   <img alt="CONFLUENCE" src="https://github.com/devicons/devicon/blob/master/icons/confluence/confluence-original.svg" width="50" height="50"/>
-  <img alt="VISUALSTUDIO" src="https://github.com/devicons/devicon/blob/master/icons/visualstudio/visualstudio-plain-wordmark.svg" width="50" height="50"/>  
-  
+  <img alt="VISUALSTUDIO" src="https://github.com/devicons/devicon/blob/master/icons/visualstudio/visualstudio-plain-wordmark.svg" width="50" height="50"/>
 </div>
 
 ---
