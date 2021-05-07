@@ -13,8 +13,6 @@ I am just another regular developer.
 
 ---
 
-🧰 Toolbox
-
 <div style="display: flex; justify-content: space-between;">
   <img alt="GIT" src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" width="50" height="50"/>
   <img alt="BASH" src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" width="50" height="50"/>
