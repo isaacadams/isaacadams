@@ -5,6 +5,12 @@
 
 I am just another regular developer.
 
+## &#x1f4c8; My GitHub Stats
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=isaacadams&hide=html,css&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+
+[![Isaac's GitHub stats](https://github-readme-stats.vercel.app/api?username=isaacadams&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+
 ---
 
 🧰 Toolbox
@@ -21,18 +27,13 @@ I am just another regular developer.
   <img alt="TS" src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" width="50" height="50"/>
   <img alt="REACT" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" width="50" height="50"/>
   <img alt="NODEJS" src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" width="50" height="50"/>
+</div>
+
+<div style="display: flex; justify-content: space-between;">
   <img alt="NPM" src="https://github.com/devicons/devicon/blob/master/icons/npm/npm-original-wordmark.svg" width="50" height="50"/>
   <img alt="BABEL" src="https://github.com/devicons/devicon/blob/master/icons/babel/babel-original.svg" width="50" height="50"/>
   <img alt="GULP" src="https://github.com/devicons/devicon/blob/master/icons/gulp/gulp-plain.svg" width="50" height="50"/>
   <img alt="WEBPACK" src="https://github.com/devicons/devicon/blob/master/icons/webpack/webpack-original.svg" width="50" height="50"/>
-</div>
-
-<div style="display: flex; justify-content: space-between;">  
-  <img alt="BOOTSTRAP" src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain.svg" width="50" height="50"/>  
-  <img alt="CSS" src="https://cdn.worldvectorlogo.com/logos/css3.svg" width="50" height="50"/>
-  <img alt="LESS" src="https://github.com/devicons/devicon/blob/master/icons/less/less-plain-wordmark.svg" width="50" height="50"/>
-  <img alt="SASS" src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" width="50" height="50"/>
-  <img alt="JQUERY" src="https://github.com/devicons/devicon/blob/master/icons/jquery/jquery-original-wordmark.svg" width="50" height="50"/>  
 </div>
 
 <div style="display: flex; justify-content: space-between;">
@@ -42,20 +43,7 @@ I am just another regular developer.
   <img alt="NGINX" src="https://github.com/devicons/devicon/blob/master/icons/nginx/nginx-original.svg" width="50" height="50"/>
 </div>
 
-<div style="display: flex; justify-content: space-between;">
-  <img alt="FIREBASE" src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain.svg" width="50" height="50"/>
-  <img alt="BITBUCKET" src="https://github.com/devicons/devicon/blob/master/icons/bitbucket/bitbucket-original.svg" width="50" height="50"/>
-  <img alt="CONFLUENCE" src="https://github.com/devicons/devicon/blob/master/icons/confluence/confluence-original.svg" width="50" height="50"/>
-  <img alt="VISUALSTUDIO" src="https://github.com/devicons/devicon/blob/master/icons/visualstudio/visualstudio-plain-wordmark.svg" width="50" height="50"/>
-</div>
-
 ---
-
-## &#x1f4c8; My GitHub Stats
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=isaacadams&hide=html,css&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
-
-[![Isaac's GitHub stats](https://github-readme-stats.vercel.app/api?username=isaacadams&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
 
 <!--
 <img alt="" src="" width="50" height="50"/>
