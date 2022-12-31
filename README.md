@@ -3,7 +3,7 @@
 - ⌨️ I like progamming
 - ☕ I like coffee
 
-I am just another regular developer.
+I am just a software developer. Nothing special to see here. Move on.
 
 ## &#x1f4c8; My GitHub Stats
 
