@@ -83,3 +83,11 @@ You can now obtain the client key(s) for any of the accounts credentialed on tha
 # $2 = user:name@gmail.com or serviceAccount:name@gmail.com
 gcloud projects get-iam-policy $1 --format=json | jq ".bindings[] | select(.members[] | contains(\"$2\")) | .role"
 ```
+
+
+# Links & Documentation
+
+- reference gcloud CLI: https://cloud.google.com/sdk/gcloud/reference/access-approval
+- reference roles: https://cloud.google.com/iam/docs/understanding-roles
+- reference permissions: https://cloud.google.com/iam/docs/permissions-reference
+
