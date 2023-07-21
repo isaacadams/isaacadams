@@ -1,0 +1,47 @@
+# SSH Guide
+
+knowledge base for ssh
+
+see the [SSH guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) provided by github
+
+## Configure SSH Host
+
+configure hosts for communicating through SSH on your server 
+
+[more information on how to configure the config file](https://linux.die.net/man/5/ssh_config)
+
+~/.ssh/config
+```txt
+Host github.com-some-unique-name
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/point_to_rsa_pk
+```
+
+# Tunneling
+
+you can tunnel http traffic through a local container
+
+```bash
+#startup
+docker compose -f ssh.yml up -d
+#shutdown
+docker compose -f ssh.yml down --remove-orphans
+```
+
+# Configuring network tunneling through SSH & Firefox
+
+```
+$ start ssh -R 19999:localhost:22 isaac@192.168.1.221
+```
+
+[great article on ssh tunneling](https://www.howtogeek.com/168145/how-to-use-ssh-tunneling/)
+
+| kind    | command                                                          |
+| ------- | ---------------------------------------------------------------- |
+| local   | ssh -L local_port:remote_address:remote_port username@server.com |
+| remote  | ssh -R remote_port:local_address:local_port username@server.com  |
+| dynamic | ssh -D local_port username@server.com                            |
+
+- open putty and ssh into the container
+- change firefox settings to proxy the socks port

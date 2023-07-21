@@ -1,0 +1,9 @@
+services:
+  ssh:
+    build:
+      context: .
+      dockerfile: dockerfile.ssh
+    ports:
+      - '22:22'
+    dns:
+      - 1.1.1.1
