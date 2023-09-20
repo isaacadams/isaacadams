@@ -4,6 +4,19 @@ knowledge base for ssh
 
 see the [SSH guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) provided by github
 
+## Creating a new key
+
+```bash
+# generate your new ssh key
+ssh-keygen -t ed25519 -C "your_email@example.com"
+# start up the ssh agent
+eval "$(ssh-agent -s)"
+# add ssh key to ssh agent (point to private key)
+ssh-add ~/.ssh/id_ed25519
+# copy public key for registering to external service
+clip < ~/.ssh/id_ed25519.pub
+```
+
 ## Configure SSH Host
 
 configure hosts for communicating through SSH on your server 
@@ -18,7 +31,7 @@ Host github.com-some-unique-name
     IdentityFile ~/.ssh/point_to_rsa_pk
 ```
 
-# Tunneling
+## Tunneling
 
 you can tunnel http traffic through a local container
 
@@ -29,7 +42,7 @@ docker compose -f ssh.yml up -d
 docker compose -f ssh.yml down --remove-orphans
 ```
 
-# Configuring network tunneling through SSH & Firefox
+## Configuring network tunneling through SSH & Firefox
 
 ```
 $ start ssh -R 19999:localhost:22 isaac@192.168.1.221
