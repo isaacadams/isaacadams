@@ -20,11 +20,11 @@ NOTE: replace `<YOUR-NAME> `
 PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
 PS1="$PS1"'\n'                 # new line
 PS1="$PS1"'\[\033[32m\]'       # change to green
-PS1="$PS1"'<YOUR-NAME> '       # show your custom name
+PS1="$PS1"'Bubba '             # show your custom name
 PS1="$PS1"'\[\033[33m\]'       # change to brownish yellow
-PS1="$PS1"'\W'                 # current working directory
+PS1="$PS1"'\W '                # current working directory
 PS1="$PS1"'\[\033[35m\]'       # change to purple
-PS1="$PS1"'\D{%H:%M:%S} '      # show current time
+PS1="$PS1"'\D{%H:%M:%S}'       # show current time
 if test -z "$WINELOADERNOEXEC"
 then
     GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
