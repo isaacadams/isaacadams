@@ -26,3 +26,11 @@ echo $JSON
 # replace '"' with '""'
 echo $(sed -e 's/"/""/g' data.json) > data2.json
 ```
+
+
+# ffmpeg
+
+```bash
+# captures 10 frames per second in high quality from given input.mp4
+ffmpeg -r 1 -i input.mp4 -r 1 -vf fps=10 %d.png
+```
