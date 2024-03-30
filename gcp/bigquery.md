@@ -11,3 +11,50 @@
 - parquet: https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-parquet
 - json: https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json
 - csv: https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv
+
+
+# Restoring Deleted Tables
+
+1. What is the name of the deleted dataset and in what region was it located?
+
+name: `my_dataset_v1`\
+region: `northamerica-northeast1`
+
+2. Recreate the dataset in the correct region
+
+```bash
+bq --location=northamerica-northeast1 mk -d my_dataset_v1
+```
+
+3. Collect all the old table names to restore
+
+```sql
+SELECT TABLE_NAME, MAX(creation_time)
+FROM
+  `region-northamerica-northeast1`.INFORMATION_SCHEMA.TABLE_STORAGE_TIMELINE
+WHERE
+  TABLE_SCHEMA = "my_dataset_v1"
+  AND total_rows > 0
+  AND table_type != "VIEW"
+GROUP BY TABLE_NAME;
+```
+
+3. Download the results to a CSV file
+4. Save it to `tables.csv` and run `just run`
+
+```bash
+# justfile, see https://github.com/casey/just
+restore dataset table:
+   bq cp {{dataset}}.{{table}}@-3600000 {{dataset}}.{{table}}
+
+run:
+   qsv select TABLE_NAME tables.csv | \
+      qsv behead | \
+      xargs -t -n 1 just restore my_dataset_v1
+```
+
+## Tools
+
+- `just` (https://github.com/casey/just)
+- `qsv` (https://github.com/jqnatividad/qsv)
+- `bq` (ships w/ `gcloud`) (https://cloud.google.com/sdk/docs/install)
