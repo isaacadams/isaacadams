@@ -62,3 +62,5 @@ $ start ssh -R 19999:localhost:22 isaac@192.168.1.221
 ## Research
 
 - parameterized config entries: https://superuser.com/questions/1834663/ssh-parameterized-config-entries
+- automating ssh settings for devcontainers: https://www.kenmuse.com/blog/automatic-ssh-commit-signing-with-dotfiles/
+- gpg/ssh?: https://www.reddit.com/r/linux/comments/6k8nw3/killed_two_days_figuring_out_how_to_use_gpg_keys/
