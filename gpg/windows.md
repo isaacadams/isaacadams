@@ -4,9 +4,15 @@ While I was playing around with devcontainers, I discovered that there were *thr
 
 On my host windows machine, I opened up Kleopatra and realized it was loading a separate keyring than the one I expected. After some digging, I discovered a total of three `gpg` installations.
 
-1. ~/.gnupg (installed via mingwing)
-2. ~/AppData/Roaming/gnupg (installed via gpg-for-windows / kleopatra)
-3. ~/scoop/apps/gpg/gnupg (installed via scoop)
+1. git
+- gnupg: `~/.gnupg`
+- gpg: `c:\Program Files\Git\usr\bin\gpg`
+2. GPG for Windows
+- gnupg: `~/AppData/Roaming/gnupg`
+- gpg: `/c/Program Files (x86)/GnuPG/bin/gpg`
+3. scoop
+- gnupg: `~/scoop/apps/gpg/gnupg`
+- gpg: `~/scoop/apps/gpg/2.4.3/bin/gpg`
 
 What a mess! I eventually want to consolidate this down to ONE installation and use `~/.gnupg` as the home directory for `gpg`.
 
