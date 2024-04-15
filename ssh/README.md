@@ -2,6 +2,12 @@
 
 knowledge base for ssh
 
+## Generate Public Key from Private Key
+
+```bash
+ssh-keygen -y -f ~/.ssh/id_rsa > public.pub
+```
+
 see the [SSH guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) provided by github
 
 ## Creating a new key
