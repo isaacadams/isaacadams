@@ -58,3 +58,7 @@ $ start ssh -R 19999:localhost:22 isaac@192.168.1.221
 
 - open putty and ssh into the container
 - change firefox settings to proxy the socks port
+
+## Research
+
+- parameterized config entries: https://superuser.com/questions/1834663/ssh-parameterized-config-entries
