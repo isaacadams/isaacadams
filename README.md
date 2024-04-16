@@ -1,9 +1,6 @@
 ## Hi, 👋 my name is Isaac
 
-- ⌨️ I like progamming
-- ☕ I like coffee
-
-I am just a software developer. Nothing special to see here. Move on.
+I code. Sometimes I do other things.
 
 ## &#x1f4c8; My GitHub Stats
 
