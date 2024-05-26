@@ -13,6 +13,24 @@ gcloud set account `ACCOUNT`
 gcloud auth print-access-token
 ```
 
+### Find and Activate Service Account
+
+```bash
+# gind your project and set it
+gcloud projects list
+gcloud config set project `PROJECT_ID`
+
+# find the service account
+gcloud iam service-accounts list
+gcloud iam service-accounts list | grep `NAME`
+
+# create a key and save it to ./key.json
+gcloud iam service-accounts keys create ./key.json --iam-account {{name}}@{{project}}.iam.gserviceaccount.com
+
+# activate service account
+gcloud auth activate-service-account {{name}}@{{project}}.iam.gserviceaccount.com --key-file=key.json
+```
+
 ## Service Accounts
 
 Programmatic access to bigquery is implemented via service accounts. This guide serves to help you easily jumpstart a service account for bigquery access. The commands are defined in the [justfile](./justfile).
