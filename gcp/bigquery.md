@@ -53,6 +53,39 @@ run:
       xargs -t -n 1 just restore my_dataset_v1
 ```
 
+# Discovering Hidden Tables
+
+Tables that begin with `__` are hidden from the console view in bigquery. 
+
+```sql
+-- write sql that queries metadata and finds datasets that begin with `__`
+```
+
+# Check tables in dataset
+
+1. Get all the table names
+
+```sql
+SELECT * FROM __Segment_reverse_etl.__TABLES__
+```
+
+```sh
+bq ls --format json __segment_reverse_etl | jq '"__segment_reverse_etl." + .[].tableReference.tableId'
+```
+
+2. Query the statistics on the tables
+
+> Need to use `xargs` to run `bq show` against the result of the prior command.
+
+```
+bq show "__segment_reverse_etl.checkpoints"
+bq show "__segment_reverse_etl.checkpoints_cvTtWkgqbE69Noy8K4EB16"
+bq show "__segment_reverse_etl.checkpoints_meyuE5u6SMeDeJKnDqRjqS"
+bq show "__segment_reverse_etl.records"
+bq show "__segment_reverse_etl.records_cvTtWkgqbE69Noy8K4EB16"
+bq show "__segment_reverse_etl.records_meyuE5u6SMeDeJKnDqRjqS"
+```
+
 ## Tools
 
 - `just` (https://github.com/casey/just)
