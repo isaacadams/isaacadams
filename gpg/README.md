@@ -26,6 +26,14 @@ gpg --list-keys
 gpg --list-secret-keys --keyid-format=long
 ```
 
+## Storage & Management
+
+GPG and SSH keys should never leave the machines on which they were generated. Whenever a key is registered on some public platform (ie github), you should give it an identifier that tells you which machine the key is located on.
+
+For my GPG keys, I import the private keys into gpg via the command line and then delete the raw private key file.
+
+If I ever lose a private key completely, no sweat, just generate a new one, register it, and then deregister the old one.
+
 ## Connect git with GPG by Updating `~/.gitconfig`
 
 git needs the `signingkey` for `gpgsign = true` to work
