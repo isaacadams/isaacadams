@@ -10,6 +10,22 @@ Knowledge base for getting started with GPG and configuring git to use it for si
 - linux/ubuntu: `sudo apt-get install gnupg`
 - mac: `brew install gnupg`
 
+## Troubleshooting
+
+### restart gpg agent
+
+```sh
+gpgconf --kill gpg-agent
+```
+
+### check imported keys
+
+```sh
+gpg --list-keys
+# to see signing key
+gpg --list-secret-keys --keyid-format=long
+```
+
 ## Connect git with GPG by Updating `~/.gitconfig`
 
 git needs the `signingkey` for `gpgsign = true` to work
