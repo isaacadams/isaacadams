@@ -16,18 +16,14 @@ sequenceDiagram
     participant D as DNS Server
 
     Note over S: Mail Preparation
-    S->>D: Query SPF, DKIM, and DMARC records
-    D-->>S: Return SPF, DKIM, and DMARC records
-
-    Note over S: SPF Check
     S->>R: Send email
+
+    Note over R: SPF Check
     R->>D: Query SPF record
     D-->>R: Return SPF record
     R->>R: Validate SPF (IP match)
 
-    Note over S: DKIM Signing
-    S->>S: Generate DKIM signature
-    S->>R: Send email with DKIM signature
+    Note over R: DKIM Verification
     R->>D: Query DKIM public key
     D-->>R: Return DKIM public key
     R->>R: Validate DKIM signature
@@ -38,4 +34,5 @@ sequenceDiagram
     R->>R: Evaluate DMARC policy (SPF, DKIM results)
 
     R->>S: Send email accepted/rejected notification
+
 ```
