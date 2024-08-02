@@ -1,0 +1,45 @@
+set export
+
+AWS_PROFILE := ""
+
+default:
+    just -l
+
+create_ec2_role role_name:
+    #!/bin/bash
+    aws iam create-role --role-name {{role_name}} --assume-role-policy-document '{
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ec2.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }'
+
+s3_read_bucket_policy role_name policy_name bucket:
+    #!/bin/bash
+    aws iam put-role-policy --role-name {{role_name}} --policy-name {{policy_name}} --policy-document '{
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": ["s3:ListBucket"],
+                "Resource": ["arn:aws:s3:::{{bucket}}"]
+            },
+            {
+                "Effect": "Allow",
+                "Action": ["s3:GetObject"],
+                "Resource": ["arn:aws:s3:::{{bucket}}/*"]
+            }
+        ]
+    }'
+
+create_instance_profile profile_name role_name:
+    # create instance profile
+    aws iam create-instance-profile --instance-profile-name {{profile_name}}
+    # Add the role to the instance profile
+    aws iam add-role-to-instance-profile --instance-profile-name {{profile_name}} --role-name {{role_name}}
