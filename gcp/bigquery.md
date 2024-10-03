@@ -15,9 +15,15 @@
 
 # Restoring Deleted Tables
 
+Bigquery has a "time travel" feature which allows deleted tables to be restored: https://cloud.google.com/bigquery/docs/access-historical-data#restore-a-table.
+
+- `just` (https://github.com/casey/just)
+- `qsv` (https://github.com/jqnatividad/qsv)
+- `bq` (ships w/ `gcloud`) (https://cloud.google.com/sdk/docs/install)
+
 1. What is the name of the deleted dataset and in what region was it located?
 
-name: `my_dataset_v1`\
+dataset: `my_dataset_v1`\
 region: `northamerica-northeast1`
 
 2. Recreate the dataset in the correct region
@@ -29,7 +35,7 @@ bq --location=northamerica-northeast1 mk -d my_dataset_v1
 3. Collect all the old table names to restore
 
 ```sql
-SELECT TABLE_NAME, MAX(creation_time)
+SELECT TABLE_NAME, MAX(creation_time) as creation_time
 FROM
   `region-northamerica-northeast1`.INFORMATION_SCHEMA.TABLE_STORAGE_TIMELINE
 WHERE
@@ -44,14 +50,20 @@ GROUP BY TABLE_NAME;
 
 ```bash
 # justfile, see https://github.com/casey/just
-restore dataset table:
-   bq cp {{dataset}}.{{table}}@-3600000 {{dataset}}.{{table}}
+
+# tableid@TIME where TIME is the number of milliseconds since the Unix epoch.
+# tableid@-TIME_OFFSET where TIME_OFFSET is the relative offset from the current time, in milliseconds.
+# tableid@0: Specifies the oldest available historical data.
+restore dataset time table:
+   bq cp {{dataset}}.{{table}}@{{time}} {{dataset}}.{{table}}
 
 run:
    qsv select TABLE_NAME tables.csv | \
       qsv behead | \
-      xargs -t -n 1 just restore my_dataset_v1
+      xargs -t -n 1 just restore my_dataset_v1 -3600000
 ```
+
+process will begin restoring tables in `tables.csv` and restore them -3600000 ms from current time
 
 # Discovering Hidden Tables
 
