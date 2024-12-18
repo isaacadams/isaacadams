@@ -2,6 +2,8 @@
 
 I am falling in love with nushell. I cannot tell if this will be good or bad. Probably bad.
 
+- [awesome nu](https://github.com/nushell/awesome-nu)
+
 ## Creating Commands
 
 - https://archive.ph/TjEJ8
