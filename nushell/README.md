@@ -12,6 +12,11 @@ I am falling in love with nushell. I cannot tell if this will be good or bad. Pr
 
 https://www.nushell.sh/lang-guide/chapters/types/other_types/custom_value.html#additional-language-notes
 
+## Plugins
+
+There is a package ecosystem (plugins) in nushell, but installing them and managing is unfortunately a bit complex. I haven't played around with plugins much, but this looks like a helpful article:
+
+- https://qqq.ninja/blog/post/nushell-install-plugins/
 
 ## Recipes
 
