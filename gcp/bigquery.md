@@ -54,6 +54,7 @@ GROUP BY TABLE_NAME;
 # tableid@TIME where TIME is the number of milliseconds since the Unix epoch.
 # tableid@-TIME_OFFSET where TIME_OFFSET is the relative offset from the current time, in milliseconds.
 # tableid@0: Specifies the oldest available historical data.
+# get 2 days in milliseconds using nushell -> `nu -c "(2day | format duration ms)"`
 restore dataset time table:
    bq cp {{dataset}}.{{table}}@{{time}} {{dataset}}.{{table}}
 
