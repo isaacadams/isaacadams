@@ -37,6 +37,14 @@ Host github.com-some-unique-name
     IdentityFile ~/.ssh/point_to_rsa_pk
 ```
 
+## Convert to OpenSSH Format
+
+Convert a public key into openssh format.
+
+```sh
+ssh-keygen -i -f /path/to/key.pub
+```
+
 ## Tunneling
 
 you can tunnel http traffic through a local container
