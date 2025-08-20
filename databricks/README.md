@@ -38,3 +38,26 @@ host          = <workspace-url>
 client_id     = <service-principal-client-id>
 client_secret = <service-principal-oauth-secret>
 ```
+
+
+## Files
+
+export directories from databricks to local machine
+
+```sh
+databricks workspace export-dir <workspace-path> <target-path>
+```
+
+sync local worksapace to databricks
+
+```sh
+databricks sync --watch . /Workspace/Users/...
+```
+
+## Catalogs/Schemas/Tables
+
+find the s3 location of a table
+
+```sql
+DESCRIBE DETAIL <catalog>.<schema>.<table>;
+```
