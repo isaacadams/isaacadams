@@ -5,7 +5,9 @@ Knowledge base for all things DNS.
 
 ## Mail Records
 
-DMARC, DKIM, and SPF... GAAHHHH!!!
+- DMARC (https://x.com/sysxplore/status/1966488110142804245)
+- DKIM
+- SPF
 
 Yeah, I remember not knowing what the heck these things meant. Its really weird how things that were once mysterious are now simple. I hope is to explain these abbreviations in the simplest way I know how.
 
@@ -46,5 +48,6 @@ sequenceDiagram
     R->>R: Evaluate DMARC policy (SPF, DKIM results)
 
     R->>S: Send email accepted/rejected notification
+
 
 ```
